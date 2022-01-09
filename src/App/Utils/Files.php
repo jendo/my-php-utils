@@ -14,10 +14,11 @@ class Files
 	public static function writingToAFile(string $filename, string $text): bool
 	{
 		if (file_exists($filename) === false) {
-			return false;
+			$myFile = fopen($filename, 'wb+');
+		} else {
+			$myFile = fopen($filename, 'ab+');
 		}
 
-		$myFile = fopen($filename, 'ab+');
 		if ($myFile === false) {
 			return false;
 		}
