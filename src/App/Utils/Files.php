@@ -11,7 +11,7 @@ class Files
 	 * @param string $text
 	 * @return void
 	 */
-	public static function writingToAFile(string $filename, string $text): bool
+	public static function writingToFile(string $filename, string $text): bool
 	{
 		if (file_exists($filename) === false) {
 			$myFile = fopen($filename, 'wb+');
