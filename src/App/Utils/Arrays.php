@@ -16,4 +16,17 @@ class Arrays
 		return array_values(array_unique($arr));
 	}
 
+
+	/**
+	 * @param array $list
+	 * @return mixed
+	 */
+	public static function removeRandomElementFromList(array &$list)
+	{
+		$randomKey = array_rand($list);
+		$randomElement = $list[$randomKey];
+		unset($list[$randomKey]);
+
+		return $randomElement;
+	}
 }
