@@ -8,7 +8,7 @@ use App\Utils\Files;
 $filename = '/application/temp/test.txt';
 $text = 'Hello world' . PHP_EOL;
 
-$result = Files::writingToAFile($filename, $text);
+$result = Files::writingToFile($filename, $text);
 
 if ($result === true) {
 	echo 'Text was written to file.';
